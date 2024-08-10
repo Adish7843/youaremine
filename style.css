@@ -1,0 +1,86 @@
+body {
+    background: url('roses-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 50px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn {
+    background-color: #ff3333;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.5em;
+    transition: background-color 0.3s, transform 0.3s;
+    position: relative;
+}
+
+.btn:hover {
+    background-color: #cc0000;
+}
+
+.pop-up {
+    position: absolute;
+    animation: popUp 1s forwards;
+}
+
+@keyframes popUp {
+    0% { opacity: 0; transform: scale(0.5); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.letter {
+    width: 300px;
+    height: 200px;
+    background-color: #fff;
+    border: 2px solid #ff6666;
+    margin: 0 auto;
+    position: relative;
+    cursor: pointer;
+}
+
+.letter-inner {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    overflow: hidden;
+    transform: translateY(-100%);
+    transition: transform 0.5s ease-in-out;
+}
+
+.letter.open .letter-inner {
+    transform: translateY(0);
+}
+
+.hidden {
+    display: none;
+}
+
+#loveMessage {
+    padding: 20px;
+    background: #fff;
+    border: 2px solid #ff6666;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 80%;
+}
